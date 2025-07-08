@@ -18,7 +18,7 @@ const Header = ({ cartItemsCount, onCartClick }: HeaderProps) => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <Leaf className="h-8 w-8 text-red-200" />
-            <h1 className="text-2xl font-bold">FreshFarm Store</h1>
+            <h1 className="text-2xl font-bold">IndoAm</h1>
           </div>
 
           {/* Desktop Navigation */}
