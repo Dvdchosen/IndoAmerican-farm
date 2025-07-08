@@ -1,5 +1,5 @@
 
-import { Leaf, Truck, Award } from 'lucide-react';
+import { Leaf, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
@@ -28,14 +28,6 @@ const HeroSection = () => {
                 <h3 className="text-xl font-semibold">100% Organic</h3>
               </div>
               <p className="text-red-100">Certified organic products grown with sustainable farming practices</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="flex items-center mb-3">
-                <Truck className="h-8 w-8 text-red-200 mr-3" />
-                <h3 className="text-xl font-semibold">Farm to Table</h3>
-              </div>
-              <p className="text-red-100">Fresh delivery from farm to your table within 24 hours of harvest</p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
