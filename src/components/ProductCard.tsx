@@ -33,7 +33,7 @@ const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
       
       <CardContent className="p-4">
         <div className="mb-2">
-          <span className="text-xs font-medium text-green-600 bg-green-100 px-2 py-1 rounded-full">
+          <span className="text-xs font-medium text-red-600 bg-red-100 px-2 py-1 rounded-full">
             {product.category}
           </span>
         </div>
@@ -41,7 +41,7 @@ const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
         <p className="text-gray-600 text-sm mb-3 line-clamp-2">{product.description}</p>
         <div className="flex items-center justify-between">
           <div>
-            <span className="text-2xl font-bold text-green-600">${product.price}</span>
+            <span className="text-2xl font-bold text-red-600">${product.price}</span>
             <span className="text-gray-500 text-sm ml-1">/{product.unit}</span>
           </div>
         </div>
@@ -50,7 +50,7 @@ const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
       <CardFooter className="p-4 pt-0">
         <Button
           onClick={() => onAddToCart(product)}
-          className="w-full bg-green-600 hover:bg-green-700 text-white"
+          className="w-full bg-red-600 hover:bg-red-700 text-white"
         >
           <Plus className="h-4 w-4 mr-2" />
           Add to Cart

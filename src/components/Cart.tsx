@@ -54,7 +54,7 @@ const Cart = ({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem }: Ca
                     />
                     <div className="flex-1">
                       <h4 className="font-medium text-sm">{item.name}</h4>
-                      <p className="text-green-600 font-semibold">${item.price}/{item.unit}</p>
+                      <p className="text-red-600 font-semibold">${item.price}/{item.unit}</p>
                       <div className="flex items-center space-x-2 mt-2">
                         <Button
                           variant="outline"
@@ -95,7 +95,7 @@ const Cart = ({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem }: Ca
               <div className="flex justify-between items-center text-lg font-semibold">
                 <span>Total: ${total.toFixed(2)}</span>
               </div>
-              <Button className="w-full bg-green-600 hover:bg-green-700">
+              <Button className="w-full bg-red-600 hover:bg-red-700">
                 Proceed to Checkout
               </Button>
             </div>

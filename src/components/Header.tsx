@@ -12,21 +12,21 @@ const Header = ({ cartItemsCount, onCartClick }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-green-600 text-white shadow-lg">
+    <header className="bg-red-600 text-white shadow-lg">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Leaf className="h-8 w-8 text-green-200" />
+            <Leaf className="h-8 w-8 text-red-200" />
             <h1 className="text-2xl font-bold">FreshFarm Store</h1>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
-            <a href="#" className="hover:text-green-200 transition-colors">Home</a>
-            <a href="#" className="hover:text-green-200 transition-colors">Products</a>
-            <a href="#" className="hover:text-green-200 transition-colors">About</a>
-            <a href="#" className="hover:text-green-200 transition-colors">Contact</a>
+            <a href="#" className="hover:text-red-200 transition-colors">Home</a>
+            <a href="#" className="hover:text-red-200 transition-colors">Products</a>
+            <a href="#" className="hover:text-red-200 transition-colors">About</a>
+            <a href="#" className="hover:text-red-200 transition-colors">Contact</a>
           </nav>
 
           {/* Cart and Mobile Menu */}
@@ -34,7 +34,7 @@ const Header = ({ cartItemsCount, onCartClick }: HeaderProps) => {
             <Button
               variant="ghost"
               size="sm"
-              className="relative text-white hover:bg-green-700"
+              className="relative text-white hover:bg-red-700"
               onClick={onCartClick}
             >
               <ShoppingCart className="h-5 w-5" />
@@ -49,7 +49,7 @@ const Header = ({ cartItemsCount, onCartClick }: HeaderProps) => {
             <Button
               variant="ghost"
               size="sm"
-              className="md:hidden text-white hover:bg-green-700"
+              className="md:hidden text-white hover:bg-red-700"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -59,12 +59,12 @@ const Header = ({ cartItemsCount, onCartClick }: HeaderProps) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-green-500 pt-4">
+          <nav className="md:hidden mt-4 pb-4 border-t border-red-500 pt-4">
             <div className="flex flex-col space-y-2">
-              <a href="#" className="hover:text-green-200 transition-colors py-2">Home</a>
-              <a href="#" className="hover:text-green-200 transition-colors py-2">Products</a>
-              <a href="#" className="hover:text-green-200 transition-colors py-2">About</a>
-              <a href="#" className="hover:text-green-200 transition-colors py-2">Contact</a>
+              <a href="#" className="hover:text-red-200 transition-colors py-2">Home</a>
+              <a href="#" className="hover:text-red-200 transition-colors py-2">Products</a>
+              <a href="#" className="hover:text-red-200 transition-colors py-2">About</a>
+              <a href="#" className="hover:text-red-200 transition-colors py-2">Contact</a>
             </div>
           </nav>
         )}
