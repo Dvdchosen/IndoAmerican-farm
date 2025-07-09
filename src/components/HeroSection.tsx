@@ -1,4 +1,3 @@
-
 import { Leaf, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -9,7 +8,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?w=1200&h=800&fit=crop&crop=center')"
+          backgroundImage: "url('/cow-background.jpg')"
         }}
       />
       {/* Dark overlay for better text readability */}
