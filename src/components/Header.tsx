@@ -39,7 +39,12 @@ const Header = ({ cartItemsCount, onCartClick }: HeaderProps) => {
             >
               Products
             </Link>
-            <a href="#" className="hover:text-red-200 transition-colors">About</a>
+            <Link 
+              to="/about" 
+              className={`hover:text-red-200 transition-colors ${isActive('/about') ? 'text-red-200' : ''}`}
+            >
+              About
+            </Link>
             <a href="#" className="hover:text-red-200 transition-colors">Contact</a>
           </nav>
 
@@ -89,7 +94,13 @@ const Header = ({ cartItemsCount, onCartClick }: HeaderProps) => {
               >
                 Products
               </Link>
-              <a href="#" className="hover:text-red-200 transition-colors py-2">About</a>
+              <Link 
+                to="/about" 
+                className={`hover:text-red-200 transition-colors py-2 ${isActive('/about') ? 'text-red-200' : ''}`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </Link>
               <a href="#" className="hover:text-red-200 transition-colors py-2">Contact</a>
             </div>
           </nav>
