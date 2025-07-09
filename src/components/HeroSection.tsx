@@ -1,20 +1,35 @@
+
 import { Leaf, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
+  // Debug: Log the image path to console
+  console.log('Background image path:', '/cow-background.jpg');
+  
   return (
-    <div className="relative text-white">
+    <div className="relative text-white min-h-[600px]">
       {/* Background image with overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/cow-background.jpg')"
+          backgroundImage: "url('/cow-background.jpg')",
+          backgroundColor: '#8B5A3C' // Fallback brown color if image doesn't load
         }}
+        onError={() => console.log('Background image failed to load')}
       />
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black/40" />
       
       <div className="relative container mx-auto px-4 py-16">
+        {/* Debug: Add a test image element to check if the file exists */}
+        <img 
+          src="/cow-background.jpg" 
+          alt="test" 
+          style={{ display: 'none' }}
+          onLoad={() => console.log('Test image loaded successfully')}
+          onError={() => console.log('Test image failed to load - check file path and name')}
+        />
+        
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
