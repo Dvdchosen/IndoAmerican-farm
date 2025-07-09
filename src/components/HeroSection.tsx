@@ -1,5 +1,6 @@
 
 import { Leaf, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
@@ -40,9 +41,11 @@ const HeroSection = () => {
             <p className="text-xl mb-8 text-gray-100">
               Experience the freshest produce, dairy, and farm products sourced directly from our local farms. Quality you can taste, freshness you can trust.
             </p>
-            <Button size="lg" className="bg-white text-red-600 hover:bg-red-50 font-semibold">
-              Shop Now
-            </Button>
+            <Link to="/products">
+              <Button size="lg" className="bg-white text-red-600 hover:bg-red-50 font-semibold">
+                Shop Now
+              </Button>
+            </Link>
           </div>
           
           <div className="grid grid-cols-1 gap-6">

@@ -1,6 +1,7 @@
 
 import { ShoppingCart, Leaf, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 interface HeaderProps {
@@ -10,21 +11,34 @@ interface HeaderProps {
 
 const Header = ({ cartItemsCount, onCartClick }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <header className="bg-red-600 text-white shadow-lg">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <Leaf className="h-8 w-8 text-red-200" />
             <h1 className="text-2xl font-bold">IndoAmerican Farm</h1>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
-            <a href="#" className="hover:text-red-200 transition-colors">Home</a>
-            <a href="#" className="hover:text-red-200 transition-colors">Products</a>
+            <Link 
+              to="/" 
+              className={`hover:text-red-200 transition-colors ${isActive('/') ? 'text-red-200' : ''}`}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/products" 
+              className={`hover:text-red-200 transition-colors ${isActive('/products') ? 'text-red-200' : ''}`}
+            >
+              Products
+            </Link>
             <a href="#" className="hover:text-red-200 transition-colors">About</a>
             <a href="#" className="hover:text-red-200 transition-colors">Contact</a>
           </nav>
@@ -61,8 +75,20 @@ const Header = ({ cartItemsCount, onCartClick }: HeaderProps) => {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-red-500 pt-4">
             <div className="flex flex-col space-y-2">
-              <a href="#" className="hover:text-red-200 transition-colors py-2">Home</a>
-              <a href="#" className="hover:text-red-200 transition-colors py-2">Products</a>
+              <Link 
+                to="/" 
+                className={`hover:text-red-200 transition-colors py-2 ${isActive('/') ? 'text-red-200' : ''}`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/products" 
+                className={`hover:text-red-200 transition-colors py-2 ${isActive('/products') ? 'text-red-200' : ''}`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Products
+              </Link>
               <a href="#" className="hover:text-red-200 transition-colors py-2">About</a>
               <a href="#" className="hover:text-red-200 transition-colors py-2">Contact</a>
             </div>
