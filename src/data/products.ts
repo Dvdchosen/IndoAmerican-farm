@@ -7,7 +7,7 @@ export const farmProducts: Product[] = [
     id: 8,
     name: "Free-Range Eggs",
     price: 5.99,
-    image: "https://images.unsplash.com/photo-1518492104633-130d0cc84637?w=400&h=400&fit=crop",
+    image: "/IMG_9656.png",
     category: "Eggs",
     description: "Fresh eggs from our free-range, pasture-raised chickens",
     unit: "dozen"

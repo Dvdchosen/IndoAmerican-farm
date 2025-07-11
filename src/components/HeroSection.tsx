@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/cow-background.jpg')",
+          backgroundImage: "url('/Background..png')",
           backgroundColor: '#8B5A3C' // Fallback brown color if image doesn't load
         }}
         onError={() => console.log('Background image failed to load')}
